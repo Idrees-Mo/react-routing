@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
+import Error from "./pages/Error";
 
 // *******************************    Alternative way of creating router with JSX  **************************
 // const routeDefinations = createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <Error />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
