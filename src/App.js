@@ -2,10 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
-import Root from "./pages/Root";
+import RootLayout from "./pages/Root";
 
-// Alternative way of creating router with JSX
-
+// *******************************    Alternative way of creating router with JSX  **************************
 // const routeDefinations = createRoutesFromElements(
 //   <Route>
 //     <Route path="/" element={<HomePage />} />
@@ -13,13 +12,13 @@ import Root from "./pages/Root";
 //   </Route>
 // );
 // const router = createBrowserRouter(routeDefinations);
+// *****************************************  ends here  *****************************
 
 // routes
-
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <RootLayout />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },

@@ -1,12 +1,17 @@
 import { Outlet } from "react-router-dom";
+
 import MainNavigation from "../components/MainNavigation";
-const Root = () => {
+import classes from "./Root.module.css";
+
+const RootLayout = () => {
   return (
     <>
       <MainNavigation />
-      <Outlet />
+      <main className={classes.content}>
+        <Outlet />
+      </main>
     </>
   );
 };
 
-export default Root;
+export default RootLayout;
