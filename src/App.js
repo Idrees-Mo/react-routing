@@ -4,14 +4,14 @@ import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 
 // routes
-const routes = createBrowserRouter([
+const router = createBrowserRouter([
   { path: "/", element: <HomePage /> },
   { path: "/products", element: <ProductsPage /> },
 ]);
 
 // App component
 function App() {
-  return <RouterProvider router={routes} />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
