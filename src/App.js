@@ -4,6 +4,7 @@ import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
 import Error from "./pages/Error";
+import ProductDetail from "./pages/ProductDetail";
 
 // *******************************    Alternative way of creating router with JSX  **************************
 // const routeDefinations = createRoutesFromElements(
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      { path: "/products/:productId", element: <ProductDetail /> },
     ],
   },
 ]);
